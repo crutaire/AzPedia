@@ -1,0 +1,8 @@
+## Interface: 120001
+## Title: AzPedia
+## Notes: Records flight costs and finds cheaper multi-hop routes
+## Author: Zilthy
+## Version: 0.0.1
+## SavedVariables: AzPediaDB
+
+AzPedia.lua
