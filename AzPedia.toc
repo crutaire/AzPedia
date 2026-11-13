@@ -3,6 +3,6 @@
 ## Notes: Records flight costs and finds cheaper multi-hop routes
 ## Author: Zilthy
 ## Version: 0.0.1
-## SavedVariables: AzPediaDB
+## SavedVariablesPerCharacter: AzPediaDB
 
 AzPedia.lua
