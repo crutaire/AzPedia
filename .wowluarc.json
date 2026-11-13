@@ -1,0 +1,6 @@
+{
+  "flavors": ["forever"],
+  "diagnostics": {
+    "enable": ["need-check-nil"]
+  }
+}
