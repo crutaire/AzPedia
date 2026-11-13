@@ -222,16 +222,9 @@ frame:SetScript("OnEvent", function(self, event, arg1)
                     foundSavings = true
                     local savings = directCost - bestCost
                     local route = ReconstructPath(prev, dest)
-                    print(string.format(
-                        "|cffffd100[AzPedia]|r Save |cff00ff00%s|r to %s: %s (%s vs %s direct)",
-                        FormatCopper(savings), dest, route, FormatCopper(bestCost), FormatCopper(directCost)
-                    ))
                 end
             end
 
-            if not foundSavings then
-                print("|cff888888[AzPedia]|r Fares logged for " .. currentNode .. ". Visit more hubs to discover split-hop savings.")
-            end
         end)
     end
 end)
