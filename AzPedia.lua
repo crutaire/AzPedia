@@ -228,3 +228,26 @@ frame:SetScript("OnEvent", function(self, event, arg1)
         end)
     end
 end)
+
+-- Slash commands: /azp reset | /azp help
+SLASH_AZPEDIA1 = "/azp"
+SlashCmdList["AZPEDIA"] = function(msg)
+    local cmd = string.lower(strtrim(msg or ""))
+
+    if cmd == "reset" then
+        AzPediaDB.graph = {}
+        activeDirectCosts = {}
+        activeBestCosts = {}
+        activeBestPrev = {}
+        print("|cffffd100[AzPedia]|r Flight fare database has been reset.")
+    else
+        local count = 0
+        if AzPediaDB and AzPediaDB.graph then
+            for _ in pairs(AzPediaDB.graph) do
+                count = count + 1
+            end
+        end
+        print(string.format("|cffffd100[AzPedia]|r Tracking %d flight hubs.", count))
+        print("  |cff00ff00/azp reset|r - Clear saved flight prices")
+    end
+end
